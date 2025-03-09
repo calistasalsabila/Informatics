@@ -95,7 +95,7 @@ else if(r < 1){
 🔹 **Penjelasan:**
 - Jika `r < 1`, rumus yang digunakan sama dengan sebelumnya, hanya saja dengan sedikit perubahan untuk menghindari hasil negatif:
   
-  \[ S_n = \frac{a (1 - r^n)}{1 - r} \]
+  \[ Sn = (a * (r^n - 1)) / (r - 1)\]
   
 - Hasil perhitungan juga ditampilkan menggunakan `printf()`.
 
