@@ -119,5 +119,5 @@ else{
 
 Program ini merupakan implementasi sederhana dari perhitungan deret geometri dalam bahasa C. Dengan memahami setiap bagian program, kita dapat melihat bagaimana konsep iterasi dan percabangan digunakan dalam menyelesaikan permasalahan matematika.
 
-🔥 Terima kasih telah menyimak! Semoga bermanfaat! 🚀
+🔥 Terima kasihh! Semoga bermanfaat! 🚀
 
