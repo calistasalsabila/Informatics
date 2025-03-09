@@ -75,7 +75,7 @@ if (r > 1){
 🔹 **Penjelasan:**
 - Jika rasio `r` lebih besar dari 1, maka program menggunakan rumus jumlah n suku pertama dari deret geometri:
   
-  \[ S_n = \frac{a (r^n - 1)}{r - 1} \]
+  \[ Sn = (a * (r^n - 1)) / (r - 1)\]
   
 - Hasil perhitungan ditampilkan menggunakan `printf()`.
 
@@ -95,7 +95,7 @@ else if(r < 1){
 🔹 **Penjelasan:**
 - Jika `r < 1`, rumus yang digunakan sama dengan sebelumnya, hanya saja dengan sedikit perubahan untuk menghindari hasil negatif:
   
-  \[ Sn = (a * (r^n - 1)) / (r - 1)\]
+  \[Sn = a * (1 - r^n) / 1 0 r\]
   
 - Hasil perhitungan juga ditampilkan menggunakan `printf()`.
 
