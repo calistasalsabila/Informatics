@@ -101,7 +101,7 @@ else if(r < 1){
 
 ---
 
-##  Else 
+##  Else
 
 Bagian terakhir menangani kasus khusus **r = 1**.
 
