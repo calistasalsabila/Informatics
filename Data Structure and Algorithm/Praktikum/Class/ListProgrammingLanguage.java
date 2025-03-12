@@ -115,7 +115,7 @@ public class ListProgrammingLanguage {
     public void sortItems() {
         System.out.println("Before sorting: " + ProgrammingLanguage);
         Collections.sort(ProgrammingLanguage); 
-        System.out.println("Sorting the list alphabetically..(capital letters are prioritized)");
+        System.out.println("Sorting the list alphabetically.. (capital letters are prioritized)");
         System.out.println("After sorting list: " + ProgrammingLanguage);
     }
 

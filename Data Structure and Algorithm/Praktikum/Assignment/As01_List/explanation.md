@@ -157,7 +157,7 @@ This function **checks if a programming language is in the list**.
 public void sortItems() {
     System.out.println("Before sorting: " + ProgrammingLanguage);
     Collections.sort(ProgrammingLanguage); 
-    System.out.println("Sorting the list alphabetically..");
+    System.out.println("Sorting the list alphabetically..(capital letters are prioritized)");
     System.out.println("After sorting list: " + ProgrammingLanguage);
 }
 ```
