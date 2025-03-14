@@ -1,4 +1,4 @@
-# 🎨 List Programming Language in Java
+# 🎨 List Programming Language in Java Program
 
 ## 📌 Introduction
 This Java program implements a **list of programming languages** using `LinkedList`. It allows users to **display, add, remove, search, and sort** programming languages interactively.
@@ -155,7 +155,7 @@ This function **sorts the list alphabetically** using `Collections.sort()`.
 
 ---
 
-### 💪 Main Menu
+###  Main Menu
 ```java
 public static void main(String[] args) {
     ListProgrammingLanguage list = new ListProgrammingLanguage();
