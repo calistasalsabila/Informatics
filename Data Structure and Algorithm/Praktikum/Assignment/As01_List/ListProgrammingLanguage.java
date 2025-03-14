@@ -3,19 +3,19 @@ import java.util.LinkedList;
 import java.util.Collections;
 
 public class ListProgrammingLanguage {
-    private LinkedList<String> ProgrammingLanguage = new LinkedList<>();
+    private LinkedList<String> programmingLanguage = new LinkedList<>();
     private Scanner input = new Scanner(System.in); 
 
     public ListProgrammingLanguage() {
-        ProgrammingLanguage.add("C");
-        ProgrammingLanguage.add("Java");
-        ProgrammingLanguage.add("Python");
-        ProgrammingLanguage.add("C++");
-        ProgrammingLanguage.add("JavaScript");
+        programmingLanguage.add("C");
+        programmingLanguage.add("Java");
+        programmingLanguage.add("Python");
+        programmingLanguage.add("C++");
+        programmingLanguage.add("JavaScript");
     }
 
     public void displayItems() {
-        System.out.println("\nProgramming Languages: " + ProgrammingLanguage);
+        System.out.println("\nProgramming Languages: " + programmingLanguage);
     }
 
     public void returnToMenu(){
@@ -29,7 +29,7 @@ public class ListProgrammingLanguage {
         String newLanguage = input.nextLine().trim();  
     
         boolean exists = false;
-        for (String subProLang : ProgrammingLanguage) {
+        for (String subProLang : programmingLanguage) {
             if (subProLang.equalsIgnoreCase(newLanguage)) { 
                 exists = true;
                 break;
@@ -39,7 +39,7 @@ public class ListProgrammingLanguage {
         if (exists) {
             System.out.println(newLanguage + " is already in the list! Can't duplicate.");
         } else {
-            ProgrammingLanguage.add(newLanguage);
+            programmingLanguage.add(newLanguage);
             System.out.println(newLanguage + " has been added.");
             displayItems();
         }
@@ -47,17 +47,23 @@ public class ListProgrammingLanguage {
     
 
     public void removeItem() {
-        if (ProgrammingLanguage.isEmpty()) {
+        if (programmingLanguage.isEmpty()) {
             System.out.println("List is empty, no item to remove.");
             return;
         }
-        System.out.println("\n--------------");
+        System.out.println("\n---------------");
         System.out.println("Removal Options:");
-        System.out.println("-----------------");
+        System.out.println("----------------");
         System.out.println("1. Remove all programming language");
-        System.out.println("2. Remove a specific programming language?");
+        System.out.println("2. Remove a specific programming language");
         System.out.println("3. Cancel");
         System.out.print("Enter number 1 - 3: ");
+
+        if (!input.hasNextInt()) {  
+            System.out.println("Invalid input! Please enter a number between 1-3.");
+            input.next(); 
+            return; 
+        }
 
         int choice = input.nextInt();
         input.nextLine(); 
@@ -67,6 +73,7 @@ public class ListProgrammingLanguage {
             System.out.print("removing....");
             removeAll();
             displayItems();
+            System.out.println("Remove All Sucess!!");
         } else if (choice == 2) {
             removeSpecificItem();
         } else {
@@ -75,51 +82,73 @@ public class ListProgrammingLanguage {
     }
 
     private void removeAll() {
-        ProgrammingLanguage.clear();
+        programmingLanguage.clear();
         System.out.println("All items have been removed.");
     }
 
-    public void removeSpecificItem() {
-        displayItems();
-        System.out.println("Warning! This is case-sensitive, please be careful");
-        System.out.print("Enter language to remove: ");
-        String LanguageName = input.nextLine();
-        if (ProgrammingLanguage.remove(LanguageName)) {
-            System.out.println(LanguageName + " has been removed.");
-            displayItems();
-        } else {
-            System.out.println(LanguageName + " isnt in the list.");
+    private void removeSpecificItem() {
+        if (programmingLanguage.isEmpty()) {
+            System.out.println("List is empty, nothing to remove.");
+            return;
         }
+        displayItems();
+        
+        System.out.print("Enter language to remove: ");
+        
+        String languageName = input.nextLine().trim();
+    
+        if (languageName.isEmpty()) { 
+            System.out.println("Input cannot be empty!");
+            return;
+        }
+    
+        boolean removed = programmingLanguage.removeIf(subLan -> subLan.equalsIgnoreCase(languageName));
+    
+        if (removed) {
+            System.out.println(languageName + " has been removed.");
+        } else {
+            System.out.println(languageName + " isn't in the list.");
+        }
+    
+        displayItems();
     }
+    
+    
 
     public void searchItem() {
+        if (programmingLanguage.isEmpty()) {
+            System.out.println("List is empty, no item to search.");
+            return;
+        }
         System.out.print("Enter name of programming language that you search: ");
-        String LanguageName = input.nextLine().trim();
+        String languageName = input.nextLine().trim();
     
         boolean found = false;
-        for (String subProLang : ProgrammingLanguage) {
-            if (subProLang.equalsIgnoreCase(LanguageName)) { 
+        for (String subProLang : programmingLanguage) {
+            if (subProLang.equalsIgnoreCase(languageName)) { 
                 found = true;
                 break;
             }
         }
     
         if (found) {
-            System.out.println(LanguageName + " found, it's in the list.");
+            System.out.println(languageName + " found, it's in the list.");
         } else {
-            System.out.println(LanguageName + " isn't found.");
+            System.out.println(languageName + " isn't found.");
         }
     }
     
 
     public void sortItems() {
-        System.out.println("Before sorting: " + ProgrammingLanguage);
-        Collections.sort(ProgrammingLanguage); 
+        if (programmingLanguage.isEmpty()) {
+            System.out.println("List is empty, nothing to sort.");
+            return;
+        }
+        System.out.println("Before sorting: " + programmingLanguage);
+        Collections.sort(programmingLanguage); 
         System.out.println("Sorting the list alphabetically..(capital letters are prioritized)");
-        System.out.println("After sorting list: " + ProgrammingLanguage);
+        System.out.println("After sorting list: " + programmingLanguage);
     }
-
-   
 
     public static void main(String[] args) {
         ListProgrammingLanguage list = new ListProgrammingLanguage();
@@ -133,12 +162,17 @@ public class ListProgrammingLanguage {
             System.out.println("1. Display Programming Language in The List");
             System.out.println("2. Add Programming Language");
             System.out.println("3. Remove Programming Language");
-            System.out.println("4. Remove Specific Programming Language");
-            System.out.println("5. Search Programming Language");
-            System.out.println("6. Sort Programming Language ");
-            System.out.println("7. Esc");
+            System.out.println("4. Search Programming Language");
+            System.out.println("5. Sort Programming Language (capital letters are prioritized!)");
+            System.out.println("6. Esc");
             System.out.print("Choose an option (must be  a number): ");
 
+            if (!input.hasNextInt()) { 
+                System.out.println("Invalid input! Please enter a number between 1-6.");
+                input.next(); 
+                continue; 
+            }
+    
             int choice = input.nextInt();
             input.nextLine();
 
@@ -156,23 +190,19 @@ public class ListProgrammingLanguage {
                     list.returnToMenu();
                     break;
                 case 4:
-                    list.removeSpecificItem();
-                    list.returnToMenu();
-                    break;
-                case 5:
                     list.searchItem();
                     list.returnToMenu();
                     break;
-                case 6:
+                case 5:
                     list.sortItems();
                     list.returnToMenu();
                     break;
-                case 7:
+                case 6:
                     System.out.println("Thanks for using this program!");
                     input.close();
                     return;
                 default:
-                    System.out.println("Invalid.");
+                    System.out.println("Invalid choice please enter 1 -6");
             }
         }
     }
