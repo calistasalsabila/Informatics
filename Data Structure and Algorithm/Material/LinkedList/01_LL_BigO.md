@@ -4,17 +4,17 @@
 A **Linked List** is a linear data structure where elements (nodes) are linked using pointers. Unlike arrays, linked lists do not have a fixed size, making them more flexible for dynamic memory allocation.
 
 ## 🎯 Purpose of Linked List
-✔️ Efficient insertion & deletion 🏹
-✔️ Dynamic memory allocation 📦
-✔️ Overcomes limitations of arrays 🛠️
-✔️ Used in various data structures like stacks, queues, and graphs 🔗
+- ✔️ **Efficient insertion & deletion** 🏹
+- ✔️ **Dynamic memory allocation** 📦
+- ✔️ **Overcomes limitations of arrays** 🛠️
+- ✔️ **Used in various data structures like stacks, queues, and graphs** 🔗
 
 ---
 
 ## 🛠️ Types of Linked List
-1️⃣ **Singly Linked List**: Each node has a reference to the next node only. 🔄
-2️⃣ **Doubly Linked List**: Each node has references to both the previous and next nodes. ⬅️➡️
-3️⃣ **Circular Linked List**: The last node points to the first node, forming a circle 🔁
+- **🔹 Singly Linked List**: Each node has a reference to the next node only. 🔄
+- **🔹 Doubly Linked List**: Each node has references to both the previous and next nodes. ⬅️➡️
+- **🔹 Circular Linked List**: The last node points to the first node, forming a circle 🔁
 
 ---
 
@@ -81,15 +81,29 @@ public class LinkedList {
 ---
 
 ## ⏳ Linked List Big-O Complexity
-![Linked List vs Array List Big-O](img_LL_BigO.png)
+| Operation       | Linked List | Array List |
+|----------------|------------|------------|
+| Append         | O(1)       | O(1)       |
+| Remove Last    | O(n)       | O(1)       |
+| Prepend        | O(1)       | O(n)       |
+| Remove First   | O(1)       | O(n)       |
+| Insert         | O(n)       | O(n)       |
+| Remove         | O(n)       | O(n)       |
+| Lookup by Index| O(n)       | O(1)       |
+| Lookup by Value| O(n)       | O(n)       |
 
 ✔️ **Best Use Case:** When frequent insertions/deletions are required 🔥
 
 ---
 
+## 📷 Big-O Comparison Image
+![Linked List vs Array List Big-O](img_LL_BigO.png)
+
+---
+
 ## 🎯 Conclusion
-🔹 Linked Lists are powerful for **dynamic memory allocation** and **fast insertions/deletions**.
-🔹 They are not the best for **random access** due to O(n) search time.
-🔹 Understanding **Big-O complexities** is crucial when choosing data structures!
+- 🔹 Linked Lists are powerful for **dynamic memory allocation** and **fast insertions/deletions**.
+- 🔹 They are not the best for **random access** due to O(n) search time.
+- 🔹 Understanding **Big-O complexities** is crucial when choosing data structures!
 
 Happy Coding! 🚀🎉
