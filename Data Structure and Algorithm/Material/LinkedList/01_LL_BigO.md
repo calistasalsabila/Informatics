@@ -4,17 +4,17 @@
 A **Linked List** is a linear data structure where elements (nodes) are linked using pointers. Unlike arrays, linked lists do not have a fixed size, making them more flexible for dynamic memory allocation.
 
 ## 🎯 Purpose of Linked List
- ✔️ **Efficient insertion & deletion** 🏹
- ✔️ **Dynamic memory allocation** 📦
- ✔️ **Overcomes limitations of arrays** 🛠️
- ✔️ **Used in various data structures like stacks, queues, and graphs** 🔗
+-  **Efficient insertion & deletion** 🏹
+-  **Dynamic memory allocation** 📦
+-  **Overcomes limitations of arrays** 🛠️
+-  **Used in various data structures like stacks, queues, and graphs** 🔗
 
 ---
 
 ## 🛠️ Types of Linked List
- **🔹 Singly Linked List**: Each node has a reference to the next node only. 🔄
- **🔹 Doubly Linked List**: Each node has references to both the previous and next nodes. ⬅️➡️
- **🔹 Circular Linked List**: The last node points to the first node, forming a circle 🔁
+- **🔹 Singly Linked List**: Each node has a reference to the next node only. 🔄
+- **🔹 Doubly Linked List**: Each node has references to both the previous and next nodes. ⬅️➡️
+- **🔹 Circular Linked List**: The last node points to the first node, forming a circle 🔁
 
 ---
 
