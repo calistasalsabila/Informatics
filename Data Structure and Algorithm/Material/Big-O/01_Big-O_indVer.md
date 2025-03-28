@@ -1,4 +1,4 @@
-# 📌 Notasi Big O - Panduan Lengkap
+# 📌 Notasi Big O 
 
 Notasi Big O adalah notasi matematis yang digunakan untuk menggambarkan efisiensi suatu algoritma dalam hal kompleksitas waktu dan ruang. Ini membantu kita memahami bagaimana suatu algoritma bekerja saat ukuran input bertambah. 🚀
 
