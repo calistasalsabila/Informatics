@@ -76,8 +76,9 @@ Contoh pada Bubble Sort:
 ## 🛠️ 6. Contoh Big O
 
 ### 📌 Contoh 1: O(n) - Waktu Linear
+
+Kode ini melakukan iterasi dalam array dengan loop `for`, sehingga kompleksitasnya **O(n)**.
 ```java
-// Melakukan iterasi dalam array
 public class LinearExample {
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 5};
@@ -87,10 +88,21 @@ public class LinearExample {
     }
 }
 ```
+**Output:**
+```
+1
+2
+3
+4
+5
+```
+
+---
 
 ### 📌 Contoh 2: O(1) - Waktu Konstan
+
+Mengakses elemen array berdasarkan indeks selalu memakan waktu yang sama, sehingga kompleksitasnya **O(1)**.
 ```java
-// Mengakses elemen dengan indeks
 public class ConstantExample {
     public static void main(String[] args) {
         int[] arr = {10, 20, 30, 40};
@@ -98,10 +110,17 @@ public class ConstantExample {
     }
 }
 ```
+**Output:**
+```
+30
+```
+
+---
 
 ### 📌 Contoh 3: O(log n) - Waktu Logaritmik
+
+Binary Search membagi ruang pencarian menjadi dua di setiap langkah, sehingga kompleksitasnya **O(log n)**.
 ```java
-// Binary Search (kompleksitas logaritmik)
 public class BinarySearch {
     public static int binarySearch(int[] arr, int target) {
         int left = 0, right = arr.length - 1;
@@ -115,26 +134,31 @@ public class BinarySearch {
                 right = mid - 1;
             }
         }
-        return -1; // Tidak ditemukan
+        return -1;
     }
-    
     public static void main(String[] args) {
         int[] arr = {1, 3, 5, 7, 9};
         System.out.println(binarySearch(arr, 5)); // Output: 2
     }
 }
 ```
+**Output:**
+```
+2
+```
+
+---
 
 ### 📌 Contoh 4: O(n²) - Waktu Kuadratik
+
+Bubble Sort menggunakan nested loop, menyebabkan kompleksitas **O(n²)**.
 ```java
-// Nested loops (Bubble Sort)
 public class BubbleSort {
     public static void bubbleSort(int[] arr) {
         int n = arr.length;
         for (int i = 0; i < n - 1; i++) {
             for (int j = 0; j < n - i - 1; j++) {
                 if (arr[j] > arr[j + 1]) {
-                    // Swap
                     int temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
@@ -142,7 +166,6 @@ public class BubbleSort {
             }
         }
     }
-    
     public static void main(String[] args) {
         int[] arr = {5, 2, 9, 1, 5, 6};
         bubbleSort(arr);
@@ -152,7 +175,10 @@ public class BubbleSort {
     }
 }
 ```
-
+**Output:**
+```
+1 2 5 5 6 9 
+```
 ---
 
 ## 🎯 Kesimpulan
