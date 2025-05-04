@@ -1,14 +1,38 @@
-# 📌 Informatics Repository  
+# 📌 Informatics Repository
 
-## 🎯 About This Repository  
-This repository contains course materials and assignments from Informatics studies. Each course has its own folder, organizing lecture materials and coding assignments for better learning management.  
+## 🎯 About This Repository
 
-## 📂 Repository Structure  
-- **📁 Course Name (e.g., Discrete Mathematics, Data Structures, etc.)**  
-  - **📁 Assignments** → Coding exercises, projects, and homework.  
-  - **📁 Materials** → Lecture notes, summaries, and references.  
+This repository contains structured folders for all courses taken during the Informatics program. Each semester (`smt1`, `smt2`, ...) has its own subdirectory, which contains folders for individual courses. Inside each course folder, materials and tasks are organized into `assignments`, `notes`, and `projects`.
 
-## 🎓 Purpose  
-✅ Organize all Informatics course materials in one place.  
-✅ Keep track of assignments and study resources.  
-✅ Provide easy access to lecture notes and coding exercises.  
+## 📂 Folder Structure
+
+```
+informatics/
+├── smt1/
+│   ├── [Course_Name_1]/
+│   │   ├── assignments/
+│   │   ├── material/
+│   │   └── UTS/
+│   └── ...
+├── smt2/
+│   ├── [Data Structure and Algorithm]/
+│   │   ├── assignments/
+│   │   ├── material/
+│   │   └── UTS/
+│   │   └── .../
+│   └── ...
+└── README.md
+```
+
+### 📁 Folder Descriptions
+
+* **📁 assignments/** → Coding exercises, weekly tasks, and homework.
+* **📁 notes/** → Lecture summaries, concept explanations, and references.
+* **📁 projects/** → Final projects or mini-projects per course.
+
+## 🎓 Purpose
+
+* ✅ Centralize all Informatics study materials.
+* ✅ Track learning progress for each subject and semester.
+* ✅ Maintain clear separation between assignments, notes, and projects.
+* ✅ Create a tidy and professional academic portfolio.
