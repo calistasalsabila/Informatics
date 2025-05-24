@@ -35,4 +35,3 @@ informatics/
 * ✅ Centralize all Informatics study materials.
 * ✅ Track learning progress for each subject and semester.
 * ✅ Maintain clear separation between assignments, materials, and assessments.
-* ✅ Create a tidy and professional academic portfolio.
