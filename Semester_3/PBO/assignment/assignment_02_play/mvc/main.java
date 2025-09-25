@@ -1,4 +1,4 @@
-package Semester_3.PBO.assignment.assignment_02_play.PPBO_02_L0124092_CalistaSalsabila;
+package Semester_3.PBO.assignment.assignment_02_play.mvc;
 
 import java.util.Scanner;
 

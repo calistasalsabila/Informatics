@@ -1,10 +1,10 @@
-package Semester_3.PBO.assignment.assignment_02_play.PPBO_02_L0124092_CalistaSalsabila.controller;
+package Semester_3.PBO.assignment.assignment_02_play.mvc.controller;
 
 import java.util.ArrayList;
 
-import Semester_3.PBO.assignment.assignment_02_play.PPBO_02_L0124092_CalistaSalsabila.controller.InventarisController;
-import Semester_3.PBO.assignment.assignment_02_play.PPBO_02_L0124092_CalistaSalsabila.model.Barang;
-import Semester_3.PBO.assignment.assignment_02_play.PPBO_02_L0124092_CalistaSalsabila.model.Inventaris;
+import Semester_3.PBO.assignment.assignment_02_play.mvc.controller.InventarisController;
+import Semester_3.PBO.assignment.assignment_02_play.mvc.model.Barang;
+import Semester_3.PBO.assignment.assignment_02_play.mvc.model.Inventaris;
 
 
 public class InventarisController {

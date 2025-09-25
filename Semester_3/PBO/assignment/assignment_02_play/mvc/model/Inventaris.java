@@ -1,4 +1,4 @@
-package Semester_3.PBO.assignment.assignment_02_play.PPBO_02_L0124092_CalistaSalsabila.model;
+package Semester_3.PBO.assignment.assignment_02_play.mvc.model;
 
 import java.util.ArrayList;
 

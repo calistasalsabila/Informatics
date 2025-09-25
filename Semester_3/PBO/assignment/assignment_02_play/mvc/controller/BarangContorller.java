@@ -1,7 +1,7 @@
-package Semester_3.PBO.assignment.assignment_02_play.PPBO_02_L0124092_CalistaSalsabila.controller;
+package Semester_3.PBO.assignment.assignment_02_play.mvc.controller;
 
-import Semester_3.PBO.assignment.assignment_02_play.PPBO_02_L0124092_CalistaSalsabila.controller.BarangContorller;
-import Semester_3.PBO.assignment.assignment_02_play.PPBO_02_L0124092_CalistaSalsabila.model.Barang;
+import Semester_3.PBO.assignment.assignment_02_play.mvc.controller.BarangContorller;
+import Semester_3.PBO.assignment.assignment_02_play.mvc.model.Barang;
 
 
 public class BarangContorller {
