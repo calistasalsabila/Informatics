@@ -11,13 +11,13 @@ public class BarangContorller {
 
     }
 
-    public void pakaiBarang(Semester_3.PBO.assignment.assignment_02.PPBO_02_L0124092_CalistaSalsabila.model.Barang barang, int jumlah){
+    public void pakaiBarang(Barang barang, int jumlah){
         // tabmahi error handling
         barang.setStok(barang.setStok - jumlah);
     }
 
     // display detail terkait satu barang
-    public void displayBarang(Semester_3.PBO.assignment.assignment_02.PPBO_02_L0124092_CalistaSalsabila.model.Barang barang){
+    public void displayBarang(Barang barang){
         // try catch atau if else, kalau misal barang nya g ada
         System.out.println("Nama barang: " +barang);
         System.out.println("Kategori: " +barang.getKategori());
