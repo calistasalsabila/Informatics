@@ -6,5 +6,33 @@ import model.Inventaris;
 
 
 public class InventarisController {
+    private Semester_3.PBO.assignment.assignment_02.PPBO_02_L0124092_CalistaSalsabila.model.Inventaris inventaris;
+
+    public InventarisController(Inventaris inventaris){
+        this.inventaris = inventaris;
+    }
+
+    public void tambahBarang(Barang barang){
+        inventaris.getDaftarBarang().add(barang);
+    }
+
+    public void hapusBarang(int nomerBarang){
+        ArrayList<Barang> daftar = inventaris.getDaftarBarang();
+        if(nomorBarang > 0 && nomorBarang < daftar.size()){
+            daftar.remove(nomerBarang);
+        }
+    }
     
+    public Barang cariBarang(String nama){
+        for(Barang barang : inventaris.getDaftarBarang()){
+            if(barang.getName().equalsIgnoreCase(nama)){
+                return barang;
+            }
+        }
+        return "alamak tdk ketemu";
+    }
+
+    public ArrayList<Barang>getSemuaBarang(){
+        return inventaris.getDaftarBarang();
+    }
 }
