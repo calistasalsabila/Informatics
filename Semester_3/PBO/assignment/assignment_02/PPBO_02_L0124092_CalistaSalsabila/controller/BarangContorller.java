@@ -29,7 +29,3 @@ public class BarangContorller {
 }
 
 
-//  this.name = name;
-//         this.kategori = kategori;
-//         this.stok = stok;
-//         this.harga = harga;
