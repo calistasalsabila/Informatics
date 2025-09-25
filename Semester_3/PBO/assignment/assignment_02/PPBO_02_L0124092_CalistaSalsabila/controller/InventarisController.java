@@ -1,12 +1,13 @@
 package Semester_3.PBO.assignment.assignment_02.PPBO_02_L0124092_CalistaSalsabila.controller;
 
 import java.util.ArrayList;
-import model.Barang;
-import model.Inventaris;
+import Semester_3.PBO.assignment.assignment_02.PPBO_02_L0124092_CalistaSalsabila.model.Barang;
+import Semester_3.PBO.assignment.assignment_02.PPBO_02_L0124092_CalistaSalsabila.controller.InventarisController;
+import Semester_3.PBO.assignment.assignment_02.PPBO_02_L0124092_CalistaSalsabila.model.Inventaris;
 
 
 public class InventarisController {
-    private Semester_3.PBO.assignment.assignment_02.PPBO_02_L0124092_CalistaSalsabila.model.Inventaris inventaris;
+    private Inventaris inventaris;
 
     public InventarisController(Inventaris inventaris){
         this.inventaris = inventaris;
@@ -18,7 +19,7 @@ public class InventarisController {
 
     public void hapusBarang(int nomerBarang){
         ArrayList<Barang> daftar = inventaris.getDaftarBarang();
-        if(nomorBarang > 0 && nomorBarang < daftar.size()){
+        if(nomerBarang > 0 && nomerBarang < daftar.size()){
             daftar.remove(nomerBarang);
         }
     }
@@ -29,7 +30,7 @@ public class InventarisController {
                 return barang;
             }
         }
-        return "alamak tdk ketemu";
+        return null;
     }
 
     public ArrayList<Barang>getSemuaBarang(){
