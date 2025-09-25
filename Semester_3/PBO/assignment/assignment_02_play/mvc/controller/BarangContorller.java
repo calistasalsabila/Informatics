@@ -1,6 +1,5 @@
 package Semester_3.PBO.assignment.assignment_02_play.mvc.controller;
 
-import Semester_3.PBO.assignment.assignment_02_play.mvc.controller.BarangContorller;
 import Semester_3.PBO.assignment.assignment_02_play.mvc.model.Barang;
 
 
