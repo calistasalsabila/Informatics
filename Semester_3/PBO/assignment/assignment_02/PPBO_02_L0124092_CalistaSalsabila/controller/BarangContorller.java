@@ -22,7 +22,7 @@ public class BarangContorller {
         System.out.println("Nama barang: " +barang);
         System.out.println("Kategori: " +barang.getKategori());
         System.out.println("Jumlah: "+getStok);
-        System.out.println("Harge: "+barang.getHarga());
+        System.out.println("Harga: "+barang.getHarga());
 
     }
     
