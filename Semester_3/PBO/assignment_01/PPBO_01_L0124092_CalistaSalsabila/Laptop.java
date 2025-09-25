@@ -24,10 +24,6 @@ public class Laptop {
         System.out.println("RAM laptop: " +ram);
         System.out.println("Storage: " +storage);
     }
-
-
-
-
 }
 
 

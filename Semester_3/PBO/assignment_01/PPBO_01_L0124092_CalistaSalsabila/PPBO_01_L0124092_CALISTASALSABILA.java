@@ -14,3 +14,4 @@ public class PPBO_01_L0124092_CALISTASALSABILA {
         laptop1.displayInfo();
     }
 }
+
