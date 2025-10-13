@@ -111,21 +111,18 @@ public class Barang {
     }
 
 
-    public void bayar(Scanner sc, float total){
-        System.out.println("masukkan jumlah uang: ");
-        float uang = sc.nextFloat();
-        
-        if (uang < total){
-            System.out.println("Uang tidak cukup");
-            bayar(sc, total);
-        }else if(uang == total){
-            System.out.println("Thanks udah belaja disini");
-        }else{
-            System.out.println("kembalian anda adalah " + (uang - total) );
-        }
-    
+    public void bayar(Scanner sc, float total) {
+        float uang;
+        do {
+            System.out.print("Masukkan jumlah uang: ");
+            uang = sc.nextFloat();
+            if (uang < total) System.out.println("Uang tidak cukup, coba lagi.");
+        } while (uang < total);
 
-    }
+        System.out.println("Kembalian anda: " + (uang - total));
+        System.out.println("ty");
+    }   
+
 
     public void tambahBarang(String nama, int stok, float harga){
         new Barang(nama, harga, stok);
