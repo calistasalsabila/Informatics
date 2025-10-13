@@ -1,0 +1,5 @@
+package Semester_3.PBO.assignment.assignment_04.PPBO_04_L0124092_CALISTASALSABILA;
+
+public class Barang {
+    
+}

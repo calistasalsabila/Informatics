@@ -61,7 +61,7 @@ public class PPBO_03_L0124092_CalistaSalsabila {
 
         while (true) {
             System.out.println("1. Masukkan input");
-            System.out.println("2. Lihat buah");
+            System.out.println("2. Lihat buah");   
             System.out.println("3. Lihat sayur");
             System.out.print("Pilih opsi: ");
 
