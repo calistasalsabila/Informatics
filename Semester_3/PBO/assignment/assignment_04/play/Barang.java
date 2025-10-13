@@ -1,4 +1,4 @@
-package Semester_3.PBO.assignment.assignment_04.PPBO_04_L0124092_CALISTASALSABILA.play;
+package Semester_3.PBO.assignment.assignment_04.play;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -74,26 +74,42 @@ public class Barang {
         if (!found) System.out.println("Barang tidak ditemukan :)))");
     }
 
-    public void beli(String nama, int jumlah, Scanner sc){
+    public void beli(String nama, int jumlah, Scanner sc) {
         tampilkanBarang();
         boolean found = false;
-        for (Barang barang : daftarBarang){
-            if(barang.getNama().equalsIgnoreCase(nama)){ 
+        Barang barangDihapus = null; 
+
+        for (Barang barang : daftarBarang) {
+            if (barang.getNama().equalsIgnoreCase(nama)) {
+                found = true;
+
+                if (barang.getStok() < jumlah) {
+                    System.out.println("Stok tidak cukup.");
+                    break;
+                }
+
                 barang.setStok(barang.getStok() - jumlah);
 
                 if (barang.getStok() <= 0) {
-                    daftarBarang.remove(barang);
+                    barangDihapus = barang;
                 }
 
                 float total = barang.getHarga() * jumlah;
                 System.out.println("Total yang harus dibayarkan: " + total);
                 bayar(sc, total);
-                found = true;
                 break;
             }
         }
-        if (!found) System.out.println("Barang not found.");
+
+            if (!found) {
+                System.out.println("Barang not found.");
+            }
+
+            if (barangDihapus != null) {
+                daftarBarang.remove(barangDihapus);
+            }
     }
+
 
     public void bayar(Scanner sc, float total){
         System.out.println("masukkan jumlah uang: ");
