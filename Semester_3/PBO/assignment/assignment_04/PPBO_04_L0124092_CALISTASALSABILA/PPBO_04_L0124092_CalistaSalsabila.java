@@ -44,7 +44,7 @@ public class PPBO_04_L0124092_CalistaSalsabila {
 
                         System.out.print("Masukkan jumlah: ");
                         if (!sc.hasNextInt()) {
-                            System.out.println("Jumlah harus berupa angka!");
+                            System.out.println("masukkan input yg valid");
                             sc.nextLine(); 
                             break;
                         }
@@ -53,7 +53,7 @@ public class PPBO_04_L0124092_CalistaSalsabila {
                         sc.nextLine(); 
 
                         if (jumlahBeli <= 0) {
-                            System.out.println("Jumlah harus lebih dari 0!");
+                            System.out.println("Jumlah harus > 0");
                             break;
                         }
 
