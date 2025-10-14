@@ -13,6 +13,7 @@ public class PPBO_04_L0124092_CalistaSalsabila {
         new Barang("Break Heavenly Demon Sword", 1, 1);
 
         System.out.println("Welcome to ORV Store");
+        System.out.println("");
 
         while (true) {
             try {
@@ -25,17 +26,39 @@ public class PPBO_04_L0124092_CalistaSalsabila {
 
                 switch (opsi) {
                     case 1 -> Barang.tampilkanBarang();
-                    case 2 -> {
+                    case 2 ->{
                         System.out.print("Masukkan nama barang: ");
-                        String nama = sc.nextLine();
+                        String namaBarang = sc.nextLine();
+
+                        Barang barangDitemukan = null;
+                        for (Barang barang : Barang.getDaftarBarang()) {
+                            if (barang.getNama().equalsIgnoreCase(namaBarang)) {
+                                barangDitemukan = barang;
+                                break;
+                            }
+                        }
+
+                        if (barangDitemukan == null) {
+                            System.out.println("Barang not found!");
+                            break;
+                        }
 
                         System.out.print("Masukkan jumlah: ");
-                        int jumlah = sc.nextInt();
-                        sc.nextLine();
+                        if (!sc.hasNextInt()) {
+                            System.out.println("Jumlah harus berupa angka!");
+                            sc.nextLine(); 
+                            break;
+                        }
 
-                        assert jumlah > 0 : "jumlah harus lebih dari 0";
+                        int jumlahBeli = sc.nextInt();
+                        sc.nextLine(); 
 
-                        Barang.beli(nama, jumlah, sc);
+                        if (jumlahBeli <= 0) {
+                            System.out.println("Jumlah harus lebih dari 0!");
+                            break;
+                        }
+
+                        Barang.beli(namaBarang, jumlahBeli, sc);
                     }
                     case 3 -> {
                         System.out.println("Thanks!");

@@ -36,6 +36,11 @@ public class Barang {
     public void setStok(int stok) { 
         this.stok = stok; 
     }
+    
+    public static ArrayList<Barang> getDaftarBarang() {
+        return daftarBarang;
+    }
+
 
     @Override
     public String toString() {
