@@ -59,27 +59,18 @@ public class Barang {
     }
 
     public static void beli(String nama, int jumlah, Scanner sc) throws Exception {
-        boolean found = false;
-
         for (Barang barang : daftarBarang) {
-            if (barang.getNama().equalsIgnoreCase(nama)) {
-                found = true;
-
-                if (barang.getStok() == 0)
-                    throw new Exception("Barang " + nama + " sudah habis!");
-
-                if (barang.getStok() < jumlah)
-                    throw new Exception("Stok tidak cukup untuk " + nama);
-
-                barang.setStok(barang.getStok() - jumlah);
-                float total = barang.getHarga() * jumlah;
-                System.out.println("Total harga: " + total);
-                bayar(sc, total);
-                break;
-            }
+            if (barang.getStok() == 0) 
+                throw new Exception("Barang " + nama + " sudah habis!");
+            if (barang.getStok() < jumlah) 
+                throw new Exception("Stok tidak cukup untuk " + nama); 
+                
+            barang.setStok(barang.getStok() - jumlah);     
+            float total = barang.getHarga() * jumlah;   
+            System.out.println("Total harga: " + total);
+            bayar(sc, total);  
+            break;
         }
-
-        if (!found) throw new Exception("Barang not found");
     }
 
     public static void bayar(Scanner sc, float total) {
