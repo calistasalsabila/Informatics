@@ -1,47 +1,40 @@
 package Semester_3.PBO.assignment.assignment_04.PPBO_04_L0124092_CALISTASALSABILA;
 
-
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.InputMismatchException;
+
 
 public class Barang {
-
-    private static ArrayList<Barang> daftarBarang = new ArrayList <> ();
+    private static ArrayList<Barang> daftarBarang = new ArrayList<>();
 
     private String nama;
     private float harga;
     private int stok;
 
-    Barang(String nama, float harga, int stok){
+    public Barang(String nama, float harga, int stok) {
+        assert harga >= 0 : " tdk boleh negatif";
+        assert stok >= 0 : " tdk boleh negatif";
         this.nama = nama;
         this.harga = harga;
         this.stok = stok;
         daftarBarang.add(this);
-
     }
 
-    public String getNama() {
-        return nama;
+    public String getNama() { 
+        return nama; 
     }
 
-    public void setNama(String nama) {
-        this.nama = nama;
-    }
-
-    public float getHarga() {
-        return harga;
-    }
-
-    public void setHarga(float harga) {
-        this.harga = harga;
+    public float getHarga() { 
+        return harga; 
     }
 
     public int getStok() {
-        return stok;
+         return stok; 
     }
 
-    public void setStok(int stok) {
-        this.stok = stok;
+    public void setStok(int stok) { 
+        this.stok = stok; 
     }
 
     @Override
@@ -49,59 +42,60 @@ public class Barang {
         return nama + " (Harga: " + harga + ", Stok: " + stok + ")";
     }
 
-
-    public void tampilkanBarang(){
-        if(!daftarBarang.isEmpty()){
-            for(Barang barang : daftarBarang){
-                System.out.println(barang);
+    public static void tampilkanBarang() {
+        if (daftarBarang.isEmpty()) {
+            System.out.println("empty");
+        } else {
+            System.out.println("\nDaftar Barang:");
+            for (Barang barang : daftarBarang) {
+                System.out.println("- " + barang);
             }
-        }else{
-            System.out.println("nothing has left~");
         }
     }
 
-
-    public void beli(String nama, int jumlah, Scanner sc) {
-        tampilkanBarang();
+    public static void beli(String nama, int jumlah, Scanner sc) throws Exception {
         boolean found = false;
 
         for (Barang barang : daftarBarang) {
             if (barang.getNama().equalsIgnoreCase(nama)) {
                 found = true;
 
-                if (barang.getStok() < jumlah) {
-                    System.out.println("Stok tidak cukup.");
-                    break;
-                }
+                if (barang.getStok() == 0)
+                    throw new Exception("Barang " + nama + " sudah habis!");
+
+                if (barang.getStok() < jumlah)
+                    throw new Exception("Stok tidak cukup untuk " + nama);
 
                 barang.setStok(barang.getStok() - jumlah);
-
-                if (barang.getStok() <= 0) {
-                    System.out.println("habis");
-                }
-
                 float total = barang.getHarga() * jumlah;
-                System.out.println("Total yang harus dibayarkan: " + total);
+                System.out.println("Total harga: " + total);
                 bayar(sc, total);
                 break;
             }
         }
 
-            if (!found) {
-                System.out.println("Barang not found.");
-            }
+        if (!found) throw new Exception("Barang not found");
     }
 
+    public static void bayar(Scanner sc, float total) {
+        try {
+            System.out.print("Masukkan uang: ");
+            float uang = sc.nextFloat();
 
-    public void bayar(Scanner sc, float total) {
-        float uang;
-        do {
-            System.out.print("Masukkan jumlah uang: ");
-            uang = sc.nextFloat();
-            if (uang < total) System.out.println("Uang tidak cukup, coba lagi.");
-        } while (uang < total);
+            assert uang >= 0 : "Uang tdk boleh negatif";
 
-        System.out.println("Kembalian anda: " + (uang - total));
-    }      
+            if (uang < total)
+                throw new IllegalArgumentException("Uang tidak cukup..");
+
+            float kembalian = uang - total;
+            System.out.println("success, Kembalian: " + kembalian);
+        } catch (InputMismatchException e) {
+            System.out.println("input uang wajib angka");
+            sc.nextLine();
+        } catch (IllegalArgumentException e) {
+            System.out.println(" " + e.getMessage());
+        } catch (AssertionError ae) {
+            System.out.println("error " + ae.getMessage());
+        }
+    }
 }
-
