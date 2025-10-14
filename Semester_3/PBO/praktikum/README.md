@@ -1,1 +1,0 @@
-from [asprak](https://github.com/apriliaindri/Teaching-Asistent-PPBO-2025)
