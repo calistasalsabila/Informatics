@@ -13,11 +13,10 @@ public class PPBO_04_L0124092_CalistaSalsabila {
         new Barang("Break Heavenly Demon Sword", 1, 1);
 
         System.out.println("Welcome to ORV Store");
-        System.out.println("");
 
         while (true) {
             try {
-                System.out.println("\n1. Tampilkan Barang");
+                System.out.println("1. Tampilkan Barang");
                 System.out.println("2. Beli Barang");
                 System.out.println("3. Keluar");
                 System.out.print("Pilih menu: ");
