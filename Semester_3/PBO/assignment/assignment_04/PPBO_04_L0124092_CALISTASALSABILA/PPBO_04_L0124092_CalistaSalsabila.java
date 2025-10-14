@@ -12,7 +12,7 @@ public class PPBO_04_L0124092_CalistaSalsabila {
         new Barang("4th Wall", 1, 1);
         new Barang("Break Heavenly Demon Sword", 1, 1);
 
-        System.out.println("Welcome to ORV Store");
+        System.out.println("Welcome to Weird Store");
 
         while (true) {
             try {
