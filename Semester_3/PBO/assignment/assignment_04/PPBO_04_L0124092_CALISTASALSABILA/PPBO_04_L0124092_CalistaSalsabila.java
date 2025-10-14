@@ -7,10 +7,10 @@ public class PPBO_04_L0124092_CalistaSalsabila {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
-        new Barang("Unbreakable Faith", 1, 1);
-        new Barang("Ways of Survival", 1, 3);
-        new Barang("4th Wall", 1, 1);
-        new Barang("Break Heavenly Demon Sword", 1, 1);
+        new Barang("Unbreakable Faith", 2.9F, 1);
+        new Barang("Ways of Survival", 9.5F, 3);
+        new Barang("4th Wall", 8.7F, 1);
+        new Barang("Break Heavenly Demon Sword", 9.9F, 1);
 
         System.out.println("Welcome to Weird Store");
 
