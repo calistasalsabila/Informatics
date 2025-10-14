@@ -39,7 +39,7 @@ public class PPBO_04_L0124092_CalistaSalsabila {
 
                         if (barangDitemukan == null) {
                             System.out.println("Barang not found!");
-                            break;
+                            break; 
                         }
 
                         System.out.print("Masukkan jumlah: ");
@@ -57,7 +57,7 @@ public class PPBO_04_L0124092_CalistaSalsabila {
                             break;
                         }
 
-                        Barang.beli(namaBarang, jumlahBeli, sc);
+                        Barang.beli(barangDitemukan, jumlahBeli, sc);
                     }
                     case 3 -> {
                         System.out.println("Thanks!");

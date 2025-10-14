@@ -58,19 +58,20 @@ public class Barang {
         }
     }
 
-    public static void beli(String nama, int jumlah, Scanner sc) throws Exception {
-        for (Barang barang : daftarBarang) {
-            if (barang.getStok() == 0) 
-                throw new Exception("Barang " + nama + " habiss");
-            if (barang.getStok() < jumlah) 
-                throw new Exception(nama + ", stok tidak cukup"); 
+    public static void beli(Barang barangDibeli, int jumlah, Scanner sc) throws Exception {
                 
-            barang.setStok(barang.getStok() - jumlah);     
-            float total = barang.getHarga() * jumlah;   
-            System.out.println("Total harga: " + total);
-            bayar(sc, total);  
-            break;
+        if (barangDibeli.getStok() == 0) {
+            throw new Exception("Barang " + barangDibeli.getNama() + " habis");
         }
+
+        if (barangDibeli.getStok() < jumlah) {
+            throw new Exception(barangDibeli.getNama() + ", stok tidak cukup");
+        }
+
+        barangDibeli.setStok(barangDibeli.getStok() - jumlah);
+        float total = barangDibeli.getHarga() * jumlah;
+        System.out.println("Total harga: " + total);
+        bayar(sc, total);
     }
 
     public static void bayar(Scanner sc, float total) {
