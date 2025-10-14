@@ -18,7 +18,7 @@ class Barang {
 
     void kurangiStok(int jumlah) throws Exception {
         if (jumlah > stok) {
-            throw new Exception("tok tidak cukup untuk " + nama);
+            throw new Exception("stok tidak cukup untuk " + nama);
         }
         stok -= jumlah;
     }
@@ -29,7 +29,7 @@ class Barang {
     }
 }
 
-public class PBPO_04_123456789_Calista {
+public class PPBO_04_123456789_Calista {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 

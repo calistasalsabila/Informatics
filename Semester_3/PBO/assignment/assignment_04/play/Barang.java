@@ -2,7 +2,6 @@ package Semester_3.PBO.assignment.assignment_04.play;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.Iterator;
 
 public class Barang {
 
