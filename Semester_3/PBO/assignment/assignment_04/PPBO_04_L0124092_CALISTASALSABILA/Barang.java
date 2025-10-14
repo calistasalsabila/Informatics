@@ -61,9 +61,9 @@ public class Barang {
     public static void beli(String nama, int jumlah, Scanner sc) throws Exception {
         for (Barang barang : daftarBarang) {
             if (barang.getStok() == 0) 
-                throw new Exception("Barang " + nama + " sudah habis!");
+                throw new Exception("Barang " + nama + " habiss");
             if (barang.getStok() < jumlah) 
-                throw new Exception("Stok tidak cukup untuk " + nama); 
+                throw new Exception(nama + ", stok tidak cukup"); 
                 
             barang.setStok(barang.getStok() - jumlah);     
             float total = barang.getHarga() * jumlah;   
