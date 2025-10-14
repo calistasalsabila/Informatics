@@ -6,7 +6,7 @@ public class PPBO_04_L0124092_CalistaSalsabila {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
+        
         new Barang("Unbreakable Faith", 1, 1);
         new Barang("Ways of Survival", 1, 3);
         new Barang("4th Wall", 1, 1);
