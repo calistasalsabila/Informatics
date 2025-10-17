@@ -279,7 +279,7 @@ public class Main {
 **Output:**
 
 ```
-Guk guk
+meow
 ```
 
 ---
