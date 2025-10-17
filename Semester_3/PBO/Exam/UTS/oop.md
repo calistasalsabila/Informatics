@@ -264,13 +264,13 @@ class Hewan {
     void suara() { System.out.println("Hewan bersuara"); }
 }
 
-class Anjing extends Hewan {
-    void suara() { System.out.println("Guk guk"); }
+class Kucing extends Hewan {
+    void suara() { System.out.println("meow"); }
 }
 
 public class Main {
     public static void main(String[] args) {
-        Hewan h = new Anjing(); // Upcasting
+        Hewan h = new Kucing(); // Upcasting
         h.suara();
     }
 }
