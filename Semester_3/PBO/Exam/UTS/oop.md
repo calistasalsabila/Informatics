@@ -67,7 +67,7 @@ Objek adalah instansi nyata dari class.
 public class Main {
     public static void main(String[] args) {
         Mahasiswa m1 = new Mahasiswa();
-        m1.nama = "Calista";
+        m1.nama = "Boboiboy";
         m1.umur = 19;
         m1.belajar();
     }
@@ -77,7 +77,7 @@ public class Main {
 **Output:**
 
 ```
-Calista sedang belajar.
+Boboiboy sedang belajar.
 ```
 
 #### **2.3 Keyword `new`**
