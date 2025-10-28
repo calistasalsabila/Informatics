@@ -453,4 +453,3 @@ Suara anonim
 * [Oracle Java Official Docs](https://docs.oracle.com/javase/tutorial/java/concepts/)
 * [GeeksforGeeks - OOP in Java](https://www.geeksforgeeks.org/object-oriented-programming-oops-concept-in-java/)
 * [Programiz Java OOP Guide](https://www.programiz.com/java-programming/oops)
-* [Baeldung Java Tutorials](https://www.baeldung.com/java-tutorial)

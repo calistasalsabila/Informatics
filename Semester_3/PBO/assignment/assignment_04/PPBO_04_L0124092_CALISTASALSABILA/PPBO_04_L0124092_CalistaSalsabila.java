@@ -1,5 +1,6 @@
 package Semester_3.PBO.assignment.assignment_04.PPBO_04_L0124092_CALISTASALSABILA;
 
+
 import java.util.*;
 
 public class PPBO_04_L0124092_CalistaSalsabila {
@@ -56,7 +57,6 @@ public class PPBO_04_L0124092_CalistaSalsabila {
                             System.out.println("Jumlah harus > 0");
                             break;
                         }
-
                         Barang.beli(barangDitemukan, jumlahBeli, sc);
                     }
                     case 3 -> {
