@@ -7,7 +7,6 @@ import java.util.*;
 
 public class PPBO_06_L0124092_Calista {
 
-    // Kelas Mahasiswa di luar main
     static class Mahasiswa {
         String nim;
         String nama;
