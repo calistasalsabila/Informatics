@@ -67,6 +67,7 @@ public class PPBO_06_L0124092_Calista {
             System.out.println(nim + " : " + mapNilai.get(nim));
         }
 
+        // rata rata
         double total = 0;
         for (int nilai : mapNilai.values()) total += nilai;
         double rata = total / mapNilai.size();
