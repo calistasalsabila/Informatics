@@ -73,7 +73,7 @@ public class PPBO_06_L0124092_Calista {
         double rata = total / mapNilai.size();
         System.out.println("Rata-rata nilai = " + rata);
 
-        // sorting
+        // sorting, ascending
         System.out.println("\nUrutkan berdasarkan nilai:");
         Collections.sort(listMhs, Comparator.comparingInt(m -> m.nilai));
         for (Mahasiswa m : listMhs) System.out.println(m);
