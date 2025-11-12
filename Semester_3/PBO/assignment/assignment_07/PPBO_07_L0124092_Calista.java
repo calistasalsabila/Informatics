@@ -60,7 +60,7 @@ public class PPBO_07_L0124092_Calista {
         bacaDariFile(daftarAgenda, namaFile);
 
         System.out.println("-PROGRAM AGENDA HARIAN-");
-        System.out.print("Berapa banyak agenda yang ingin ditambahkan? (minimal 2): ");
+        System.out.print("Berapa banyak agenda yang ingin ditambahkan?: ");
         int jumlah = input.nextInt();
         input.nextLine();
 
