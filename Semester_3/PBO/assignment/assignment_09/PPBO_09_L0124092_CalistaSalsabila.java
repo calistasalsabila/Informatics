@@ -18,6 +18,14 @@ class Book {
         System.out.println("Book year " + year);
         System.out.println("Book isbn: " + isbn);
     }
+
+    public void cekUsiaBuku(){
+        if(year < 2020){
+            System.out.println(title +" is an old book");
+        }else{
+            System.out.println(title + " is a new Book");
+        }
+    }
 }
 
 class Novel extends Book{
@@ -61,6 +69,12 @@ public class PPBO_09_L0124092_CalistaSalsabila {
         n3.readNovel();
 
         b1.tampilkanInfo();
+
+
+        b1.cekUsiaBuku();
+        n1.cekUsiaBuku();
+        n2.cekUsiaBuku();
+        n3.cekUsiaBuku();
 
     }
 
