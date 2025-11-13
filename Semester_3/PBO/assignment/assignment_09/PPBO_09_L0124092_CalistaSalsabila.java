@@ -49,7 +49,7 @@ public class PPBO_09_L0124092_CalistaSalsabila {
         Book b1 = new Book("Atomic Habits", "James Clear", 2018, "9786020633176");
         Novel n1 =  new Novel("Omniscient Reader Viewpoint", "싱숑", 2018, "9798400903526", "fantasy, action", "4.7/5");
         Novel n2 =  new Novel("Solo Leveling", "Chugong ", 2016, "9798400903526", "fantasy, action", "4.8/5");
-        Novel n3 =  new Novel("Im Not That Kind Of Talent", "Denphy", 2022, "978-0812994995", "fantasy, action", "Old Novel");
+        Novel n3 =  new Novel("Im Not That Kind Of Talent", "Denphy", 2022, "9780812994995", "fantasy, action", "Old Novel");
 
         n1.tampilkanInfo();
         n1.readNovel();
