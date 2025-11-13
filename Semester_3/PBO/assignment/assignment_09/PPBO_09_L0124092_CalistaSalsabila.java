@@ -22,16 +22,16 @@ class Book {
 
 class Novel extends Book{
     public String genre;
-    public String status;
+    public String rate;
 
-    public Novel(String title, String author, int year, String isbn, String genre, String status){
+    public Novel(String title, String author, int year, String isbn, String genre, String rate){
         super(title, author, year, isbn);
         this.genre = genre;
-        this.status = status;
+        this.rate = rate;
     }
 
-    public void novelStatus(){
-        
+    public void readNovel(){
+        System.out.println("Read novel " + title);
     }
 
     public void tampilkanInfoNovel(){
@@ -40,7 +40,7 @@ class Novel extends Book{
         System.out.println("Novel year " + year);
         System.out.println("Novel isbn: " + isbn);
         System.out.println("Novel genre: " +genre);
-        System.out.println("Novel status: " +status);
+        System.out.println("Novel rate: " +rate);
     }
 
 }
@@ -48,8 +48,22 @@ class Novel extends Book{
 public class PPBO_09_L0124092_CalistaSalsabila {
     public static void main(String[] args) {
         Book b1 = new Book("Atomic Habits", "James Clear", 2018, "9786020633176");
-        Novel n1 =  new Novel("Omniscient Reader Viewpoint", "싱숑", 2018, "9798400903526", "fantasy, action", "Old");
-        
+        Novel n1 =  new Novel("Omniscient Reader Viewpoint", "싱숑", 2018, "9798400903526", "fantasy, action", "4.7/5");
+        Novel n2 =  new Novel("Solo Leveling", "Chugong ", 2016, "9798400903526", "fantasy, action", "4.8/5");
+        Novel n3 =  new Novel("Im Not That Kind Of Talent", "Denphy", 2022, "978-0812994995", "fantasy, action", "Old Novel");
+
+        b1.tampilkanInfo();
+
+        n1.tampilkanInfoNovel();
+        n1.readNovel();
+
+        n2.tampilkanInfoNovel();
+        n2.readNovel();
+
+        n3.tampilkanInfoNovel();
+        n3.readNovel();
+
+
     }
 
 }
