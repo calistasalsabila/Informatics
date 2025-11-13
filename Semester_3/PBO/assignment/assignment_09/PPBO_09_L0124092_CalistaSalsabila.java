@@ -30,12 +30,12 @@ class Book {
 
 class Novel extends Book{
     public String genre;
-    public String rate;
+    public String rating;
 
-    public Novel(String title, String author, int year, String isbn, String genre, String rate){
+    public Novel(String title, String author, int year, String isbn, String genre, String rating){
         super(title, author, year, isbn);
         this.genre = genre;
-        this.rate = rate;
+        this.rating = rating;
     }
 
     public void readNovel(){
@@ -47,7 +47,7 @@ class Novel extends Book{
     public void tampilkanInfo(){
         super.tampilkanInfo();
         System.out.println("Novel genre: " +genre);
-        System.out.println("Novel rate: " +rate);
+        System.out.println("Novel rating: " +rating);
     }
 
 }
@@ -77,5 +77,4 @@ public class PPBO_09_L0124092_CalistaSalsabila {
         n3.cekUsiaBuku();
 
     }
-
 }
