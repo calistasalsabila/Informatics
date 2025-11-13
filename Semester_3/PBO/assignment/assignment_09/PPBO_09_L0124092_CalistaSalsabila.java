@@ -32,13 +32,12 @@ class Novel extends Book{
 
     public void readNovel(){
         System.out.println("Read novel " + title);
-    }
+        System.out.println("\n");
+        }
 
-    public void tampilkanInfoNovel(){
-        System.out.println("Novel title: " + title);
-        System.out.println("Novel author: " + author);
-        System.out.println("Novel year " + year);
-        System.out.println("Novel isbn: " + isbn);
+    @Override
+    public void tampilkanInfo(){
+        super.tampilkanInfo();
         System.out.println("Novel genre: " +genre);
         System.out.println("Novel rate: " +rate);
     }
@@ -52,17 +51,16 @@ public class PPBO_09_L0124092_CalistaSalsabila {
         Novel n2 =  new Novel("Solo Leveling", "Chugong ", 2016, "9798400903526", "fantasy, action", "4.8/5");
         Novel n3 =  new Novel("Im Not That Kind Of Talent", "Denphy", 2022, "978-0812994995", "fantasy, action", "Old Novel");
 
-        b1.tampilkanInfo();
-
-        n1.tampilkanInfoNovel();
+        n1.tampilkanInfo();
         n1.readNovel();
 
-        n2.tampilkanInfoNovel();
+        n2.tampilkanInfo();
         n2.readNovel();
 
-        n3.tampilkanInfoNovel();
+        n3.tampilkanInfo();
         n3.readNovel();
 
+        b1.tampilkanInfo();
 
     }
 
