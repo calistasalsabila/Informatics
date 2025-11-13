@@ -105,7 +105,7 @@ public class PPBO_07_L0124092_Calista {
             return;
         }
 
-        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {                                                                  
             String baris;
             while ((baris = reader.readLine()) != null) {
                 String[] data = baris.split(";");
