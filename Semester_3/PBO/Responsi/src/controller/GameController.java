@@ -49,7 +49,7 @@ public class GameController {
                         } else if (gacha < 60) { 
                             inventory.addItem(new Item("Strength Elixir", "Attack", 15)); 
                         } else {
-                            System.out.println("wkwkwk ga hoki.");
+                            System.out.println("No item obtained :D, wkwkwk ga hoki.");
                         }
                     }
                     break;
