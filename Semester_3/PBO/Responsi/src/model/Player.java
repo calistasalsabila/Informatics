@@ -1,10 +1,10 @@
 package model;
 
-public class Player extends GameCharacter {
 
+public class Player extends GameCharacter {
     private int level;
     private int exp;
-    
+
     public Player(String name, int maxHp, int hp, int baseAttack) {
         super(name, maxHp, hp, baseAttack);
         this.level = 1;
@@ -12,28 +12,35 @@ public class Player extends GameCharacter {
     }
 
     public int getLevel() {
-        return level;
+        return level; 
     }
 
     public int getExp() {
-        return exp;
+        return exp; 
     }
 
-    public void addExp(int amount){
-        this.exp =+ amount;
+    public void setLevel(int level) {
+         this.level = level; 
+    }
 
-        if(this.exp >= 100){
+    public void setExp(int exp) {
+         this.exp = exp; 
+    }
+
+    public void addExp(int amount) {
+        this.exp += amount;
+        System.out.println("get " + amount + " XP.");
+
+        if (this.exp >= 100) {
             this.level++;
-            this.exp -= 100;
+            this.exp -= 100; 
 
-            this.hp += 50;
+            this.maxHp += 50;
             this.hp = this.maxHp;
-            this.baseAttack += 75;
+            this.baseAttack += 10;
 
-            System.out.println("lEVEL +1");
-            System.out.println("Hp + 50 and  base attack + 75");
-            System.out.println("Hp right now " + this.hp);
-            System.out.println("Exp right now: " + this.exp);
+            System.out.println("LEVEL UP! now level " + this.level);
+            System.out.println("[Stats Up] MaxHP +50 (Full Heal), Attack +10");
         }
     }
 }

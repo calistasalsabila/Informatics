@@ -22,14 +22,14 @@ public class GameView {
         System.out.println("Status Player");
         System.out.println("Nama: " + p.getName());
         System.out.println("Level: " + p.getLevel());
-        System.out.println("Hp: " + p.getHp() + "and max Hp: " + p.getMaxHp());
+        System.out.println("Hp: " + p.getHp() + " and max Hp: " + p.getMaxHp());
         System.out.println("Attack: " + p.getBaseAttack());
         System.out.println("Xp: " + p.getExp());
     }
 
     public void printEnemyStatus(Enemy e){
-        System.out.println("Target: " + e.getName() + "Diff: " + e.getDifficulty());
-        System.out.println("Hp: " + e.getHp() + "with Attack: " + e.getBaseAttack());
+        System.out.println("Target: " + e.getName() + " Diff: " + e.getDifficulty());
+        System.out.println("Hp: " + e.getHp() + " with Attack: " + e.getBaseAttack());
     }
 
     public void printBattleLog(String attacker, String defender, int dmg) {

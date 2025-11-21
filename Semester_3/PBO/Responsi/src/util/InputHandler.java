@@ -8,7 +8,7 @@ public class InputHandler {
     private Scanner scanner = new Scanner(System.in);
 
     public int getInt(String prompt) {
-        System.out.print(prompt + " >> ");
+        System.out.print(prompt + " ");
         try {
             return scanner.nextInt();
         } catch (InputMismatchException e) {
@@ -19,7 +19,7 @@ public class InputHandler {
     }
 
     public String getString(String prompt) {
-        System.out.print(prompt + " >> ");
+        System.out.print(prompt + " ");
         return scanner.next();
     }
 }
