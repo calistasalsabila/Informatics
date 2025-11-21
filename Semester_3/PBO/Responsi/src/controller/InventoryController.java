@@ -63,5 +63,7 @@ public class InventoryController {
         }
     }
 
-    public boolean isEmpty() { return items.isEmpty(); }
+    public boolean isEmpty() {
+        return items.isEmpty(); 
+    }
 }

@@ -49,7 +49,7 @@ public class BattleController {
                         }
                     }
                     break;
-                    
+
                 default:
                     System.out.println("Invalid input.");
             }
@@ -61,7 +61,7 @@ public class BattleController {
             }
 
             if (playerHasActed && e.isAlive()) {
-                System.out.println("\n--- Enemy Turn ---");
+                System.out.println("\nEnemy turn!");
                 try { Thread.sleep(800); } catch (InterruptedException ex) {} 
 
                 int enemyDmg = e.getBaseAttack() + rand.nextInt(3);
