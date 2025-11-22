@@ -1,13 +1,10 @@
 package controller;
 
-
 import model.Item;
 import model.Player;
 import util.Constant;
 import exception.GameException;
 import java.util.ArrayList;
-
-
 
 public class InventoryController {
     private ArrayList<Item> items = new ArrayList<>();
