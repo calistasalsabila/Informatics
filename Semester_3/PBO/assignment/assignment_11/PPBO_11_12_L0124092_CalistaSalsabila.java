@@ -4,7 +4,6 @@
 import java.util.*;
 
 // 1. Abstract Class & Interface 
-
 abstract class MataKuliah {
     protected String nama;
     protected int sks;
@@ -182,7 +181,6 @@ class Mahasiswa {
 }
 
 //  4. Class Thread
-
 class HitungNilaiThread implements Runnable {
     private Mahasiswa mhs;
     
@@ -208,7 +206,6 @@ class HitungNilaiThread implements Runnable {
 }
 
 // 5. main
-
 public class PPBO_11_12_L0124092_CalistaSalsabila{
     
     public static void main(String[] args) {
